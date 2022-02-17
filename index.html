@@ -16,8 +16,8 @@
 
     <title>Frontend Mentor | Time tracking dashboard</title>
   </head>
-  <body>
-    <main>
+  <body id="body">
+    <main id="main">
       <div class="profile">
         <div class="profile-info">
           <div class="img-profile"></div>
@@ -25,9 +25,9 @@
           <div class="name-profile">Jeremy Robson</div>
         </div>
         <div class="time-profile">
-          <p>Daily</p>
-          <p>Weekly</p>
-          <p>Monthly</p>
+          <p id="daily">Daily</p>
+          <p id="weekly">Weekly</p>
+          <p id="monthly">Monthly</p>
         </div>
       </div>
 
@@ -36,14 +36,16 @@
           <div class="img-work"></div>
         </header>
         <div class="info-work">
-          <div class="title-work">
-            <p>Work</p>
+          <div class="title" id="titleWork">
             <div class="ellipsis"></div>
           </div>
           <div class="work-hour">
-            <h1><span></span>HRS.</h1>
+            <h1><span class="span-hrs"></span>HRS.</h1>
             <div>
-              <p>Last <span></span> - <span></span></p>
+              <p>
+                Last <span class="span-title"></span> -
+                <span class="span-prev"></span>hrs
+              </p>
             </div>
           </div>
         </div>
@@ -54,14 +56,16 @@
           <div class="img-play"></div>
         </header>
         <div class="info-play">
-          <div class="title-play">
-            <p>Play</p>
+          <div class="title" id="titlePlay">
             <div class="ellipsis"></div>
           </div>
           <div class="play-hour">
-            <h1><span></span>HRS.</h1>
+            <h1><span class="span-hrs"></span>HRS.</h1>
             <div>
-              <p>Last <span></span> - <span></span></p>
+              <p>
+                Last <span class="span-title"></span> -
+                <span class="span-prev"></span>hrs
+              </p>
             </div>
           </div>
         </div>
@@ -72,14 +76,16 @@
           <div class="img-study"></div>
         </header>
         <div class="info-study">
-          <div class="title-study">
-            <p>Study</p>
+          <div class="title" id="titleStudy">
             <div class="ellipsis"></div>
           </div>
           <div class="study-hour">
-            <h1><span></span>HRS.</h1>
+            <h1><span class="span-hrs"></span>HRS.</h1>
             <div>
-              <p>Last <span></span> - <span></span></p>
+              <p>
+                Last <span class="span-title"></span> -
+                <span class="span-prev"></span>hrs
+              </p>
             </div>
           </div>
         </div>
@@ -90,32 +96,36 @@
           <div class="img-exercise"></div>
         </header>
         <div class="info-exercise">
-          <div class="title-exercise">
-            <p>Exercise</p>
+          <div class="title" id="titleExercise">
             <div class="ellipsis"></div>
           </div>
           <div class="exercise-hour">
-            <h1><span></span>HRS.</h1>
+            <h1><span class="span-hrs"></span>HRS.</h1>
             <div>
-              <p>Last <span></span> - <span></span></p>
+              <p>
+                Last <span class="span-title"></span> -
+                <span class="span-prev"></span>hrs
+              </p>
             </div>
           </div>
         </div>
       </div>
-      
+
       <div class="social">
         <header>
           <div class="img-social"></div>
         </header>
         <div class="info-social">
-          <div class="title-social">
-            <p>Social</p>
+          <div class="title" id="titleSocial">
             <div class="ellipsis"></div>
           </div>
           <div class="social-hour">
-            <h1><span></span>HRS.</h1>
+            <h1><span class="span-hrs"></span>HRS.</h1>
             <div>
-              <p>Last <span></span> - <span></span></p>
+              <p>
+                Last <span class="span-title"></span> -
+                <span class="span-prev"></span>hrs
+              </p>
             </div>
           </div>
         </div>
@@ -126,98 +136,21 @@
           <div class="img-self-care"></div>
         </header>
         <div class="info-self-care">
-          <div class="title-self-care">
-            <p>Self Care</p>
+          <div class="title" id="titleSelfCare">
             <div class="ellipsis"></div>
           </div>
           <div class="self-care-hour">
-            <h1><span></span>HRS.</h1>
+            <h1><span class="span-hrs"></span>HRS.</h1>
             <div>
-              <p>Last <span></span> - <span></span></p>
+              <p>
+                Last <span class="span-title"></span> -
+                <span class="span-prev"></span>hrs
+              </p>
             </div>
           </div>
         </div>
       </div>
-
     </main>
-    <!--
-    Work 5hrs
-     daily 
-    Previous - 7hrs
-    <!-- daily 
-    32hrs
-    <!-- weekly 
-    Previous - 36hrs
-    <!-- weekly 
-    103hrs
-    <!-- monthly 
-    Previous - 128hrs
-    <!-- monthly 
-
-    Play 1hr
-    <!-- daily 
-    Previous - 2hrs
-    <!-- daily 
-    10hrs
-    <!-- weekly 
-    Previous - 8hrs
-    <!-- weekly 
-    23hrs
-    <!-- monthly 
-    Previous - 29hrs
-    <!-- monthly 
-
-    Study 0hrs
-    <!-- daily 
-    Previous - 1hr
-    <!-- daily 
-    4hrs
-    <!-- weekly 
-    Previous - 7hrs
-    <!-- weekly 
-    13hrs
-    <!-- monthly 
-    Previous - 19hrs
-    <!-- monthly 
-
-    Exercise 1hr
-    <!-- daily
-    Previous - 1hr
-    <!-- daily 
-    4hrs
-    <!-- weekly
-    Previous - 5hrs
-    <!-- weekly
-    11hrs
-    <!-- monthly 
-    Previous - 18hrs
-    <!-- monthly
-
-    Social 1hr
-    <!-- daily 
-    Previous - 3hrs
-    <!-- daily 
-    5hrs
-    <!-- weekly 
-    Previous - 10hrs
-    <!-- weekly 
-    21hrs
-    <!-- monthly
-    Previous - 23hrs
-    <!-- monthly 
-
-    Self Care 0hrs
-    <!-- daily
-    Previous - 1hr
-    <!-- daily 
-    2hrs
-    <!-- weekly 
-    Previous - 2hrs
-    <!-- weekly 
-    7hrs
-    <!-- monthly
-    Previous - 11hrs
-    monthly -->
 
     <div class="attribution">
       Challenge by
@@ -225,5 +158,9 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+
+    <!-- javascript -->
+    <!-- Esto es para que primero, cargue el HTML y luego ejecute el codigo JS -->
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

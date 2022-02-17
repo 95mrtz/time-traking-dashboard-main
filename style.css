@@ -70,11 +70,11 @@ body {
 .time-profile p {
   font-size: 15px;
   margin: 12px 0px;
-  color: whitesmoke;
+  color: hsl(235, 45%, 61%);
 }
 
 .time-profile p:hover {
-  color: hsl(235, 45%, 61%);
+  color: antiquewhite;
   cursor: pointer;
 }
 
@@ -128,12 +128,8 @@ body {
   justify-content: space-around;
 }
 
-.title-work,
-.title-exercise,
-.title-play,
-.title-self-care,
-.title-social,
-.title-study {
+
+.title {
   margin-top: 25px;
   display: flex;
   flex-direction: row;
@@ -141,16 +137,13 @@ body {
   align-items: end;
 }
 
-.title-work p,
-.title-exercise p,
-.title-play p,
-.title-self-care p,
-.title-social p,
-.title-study p {
+
+.title p {
   color: antiquewhite;
   font-weight: 700;
   font-size: 14px;
 }
+
 .ellipsis {
   background-image: url("./images/icon-ellipsis.svg");
   background-repeat: no-repeat;
@@ -158,6 +151,10 @@ body {
   width: 14px;
   height: 14px;
   color: whitesmoke;
+}
+
+.ellipsis:hover {
+  cursor: pointer;
 }
 
 .work-hour,
