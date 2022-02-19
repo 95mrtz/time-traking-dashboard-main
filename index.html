@@ -16,18 +16,22 @@
 
     <title>Frontend Mentor | Time tracking dashboard</title>
   </head>
-  <body id="body">
-    <main id="main">
+
+  <body >
+    <main>
       <div class="profile">
         <div class="profile-info">
           <div class="img-profile"></div>
-          <div class="report-profile">Report for</div>
-          <div class="name-profile">Jeremy Robson</div>
+          <div>
+            <p class="report-profile">Report for</p>
+            <p class="name-profile">Jeremy Robson</p>
+          </div>
+          
         </div>
         <div class="time-profile">
-          <p id="daily">Daily</p>
-          <p id="weekly">Weekly</p>
-          <p id="monthly">Monthly</p>
+          <p id="daily" class="active text-muted">Daily</p>
+          <p id="weekly" class="active text-muted">Weekly</p>
+          <p id="monthly" class="active text-muted">Monthly</p>
         </div>
       </div>
 
@@ -36,11 +40,12 @@
           <div class="img-work"></div>
         </header>
         <div class="info-work">
-          <div class="title" id="titleWork">
+          <div class="section-title">
+            <p class="title"></p>
             <div class="ellipsis"></div>
           </div>
           <div class="work-hour">
-            <h1><span class="span-hrs"></span>HRS.</h1>
+            <h1><span class="span-hrs"></span>hrs</h1>
             <div>
               <p>
                 Last <span class="span-title"></span> -
@@ -56,11 +61,12 @@
           <div class="img-play"></div>
         </header>
         <div class="info-play">
-          <div class="title" id="titlePlay">
+          <div class="section-title">
+            <p class="title"></p>
             <div class="ellipsis"></div>
           </div>
           <div class="play-hour">
-            <h1><span class="span-hrs"></span>HRS.</h1>
+            <h1><span class="span-hrs"></span>hrs</h1>
             <div>
               <p>
                 Last <span class="span-title"></span> -
@@ -76,11 +82,12 @@
           <div class="img-study"></div>
         </header>
         <div class="info-study">
-          <div class="title" id="titleStudy">
+          <div class="section-title">
+            <p class="title"></p>
             <div class="ellipsis"></div>
           </div>
           <div class="study-hour">
-            <h1><span class="span-hrs"></span>HRS.</h1>
+            <h1><span class="span-hrs"></span>hrs</h1>
             <div>
               <p>
                 Last <span class="span-title"></span> -
@@ -96,11 +103,12 @@
           <div class="img-exercise"></div>
         </header>
         <div class="info-exercise">
-          <div class="title" id="titleExercise">
+          <div class="section-title">
+            <p class="title"></p>
             <div class="ellipsis"></div>
           </div>
           <div class="exercise-hour">
-            <h1><span class="span-hrs"></span>HRS.</h1>
+            <h1><span class="span-hrs"></span>hrs</h1>
             <div>
               <p>
                 Last <span class="span-title"></span> -
@@ -116,11 +124,12 @@
           <div class="img-social"></div>
         </header>
         <div class="info-social">
-          <div class="title" id="titleSocial">
+          <div class="section-title">
+            <p class="title"></p>
             <div class="ellipsis"></div>
           </div>
           <div class="social-hour">
-            <h1><span class="span-hrs"></span>HRS.</h1>
+            <h1><span class="span-hrs"></span>hrs</h1>
             <div>
               <p>
                 Last <span class="span-title"></span> -
@@ -136,11 +145,12 @@
           <div class="img-self-care"></div>
         </header>
         <div class="info-self-care">
-          <div class="title" id="titleSelfCare">
+          <div class="section-title">
+            <p class="title"></p>
             <div class="ellipsis"></div>
           </div>
           <div class="self-care-hour">
-            <h1><span class="span-hrs"></span>HRS.</h1>
+            <h1><span class="span-hrs"></span>hrs</h1>
             <div>
               <p>
                 Last <span class="span-title"></span> -
@@ -156,8 +166,8 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+        >. Coded by <a href="https://github.com/manuelrtz" target="_blank">Manuel Ortiz</a>.
+      </div>
 
     <!-- javascript -->
     <!-- Esto es para que primero, cargue el HTML y luego ejecute el codigo JS -->

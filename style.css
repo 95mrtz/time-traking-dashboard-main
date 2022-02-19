@@ -65,32 +65,24 @@ body {
   align-items: flex-start;
   padding-left: 20px;
   margin: 20px 0px;
-}
-
-.time-profile p {
-  font-size: 15px;
-  margin: 12px 0px;
   color: hsl(235, 45%, 61%);
 }
 
-.time-profile p:hover {
-  color: antiquewhite;
+.text-muted {
+  font-size: 15px;
+  margin: 12px 0px;
+  color: whitesmoke;
   cursor: pointer;
+}
+
+.active {
+  cursor: pointer;
+  font-size: 15px;
+  margin: 12px 0px;
 }
 
 .work {
   grid-area: card-1;
-}
-
-.work,
-.study,
-.social,
-.play,
-.self-care,
-.exercise {
-  background-color: hsl(235, 46%, 20%);
-  border-radius: 9px;
-  z-index: 1;
 }
 
 .work header {
@@ -98,7 +90,6 @@ body {
   height: 25%;
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
-  z-index: 2;
   position: relative;
 }
 
@@ -118,25 +109,34 @@ body {
 .info-exercise,
 .info-play,
 .info-self-care {
+  background-color: hsl(235, 46%, 20%);
   height: 75%;
-  border-top-left-radius: 9px;
-  border-top-right-radius: 9px;
-  z-index: 3;
+  transform: translateY(-0.3em);
+  transition: 0.3s ease all;
   padding: 0px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  border-radius: 9px;
 }
 
+.info-work:hover,
+.info-study:hover,
+.info-social:hover,
+.info-play:hover,
+.info-self-care:hover,
+.info-exercise:hover {
+  background-color: hsl(235, 45%, 61%);
+  cursor: pointer;
+}
 
-.title {
+.section-title {
   margin-top: 25px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: end;
 }
-
 
 .title p {
   color: antiquewhite;
@@ -168,11 +168,17 @@ body {
 }
 
 .work-hour h1,
+.work-hour h1 span,
 .exercise-hour h1,
+.exercise-hour h1 span,
 .play-hour h1,
+.play-hour h1 span,
 .self-care-hour h1,
+.self-care-hour h1 span,
 .social-hour h1,
-.study-hour h1 {
+.social-hour h1 span,
+.study-hour h1,
+.study-hour h1 span {
   font-size: 40px;
   font-weight: 300;
   color: whitesmoke;
@@ -198,12 +204,11 @@ body {
   height: 25%;
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
-  z-index: 2;
-  position: relative;
+  transform: translateY(0.2em);
+  transition: 0.3s ease all;
 }
 
 .img-play {
-  position: absolute;
   background-image: url("./images/icon-play.svg");
   width: 100%;
   height: 100%;
@@ -221,8 +226,9 @@ body {
   height: 25%;
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
-  z-index: 2;
   position: relative;
+  transform: translateY(0.2em);
+  transition: 0.3s ease all;
 }
 
 .img-study {
@@ -244,8 +250,9 @@ body {
   height: 25%;
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
-  z-index: 2;
   position: relative;
+  transform: translateY(0.2em);
+  transition: 0.3s ease all;
 }
 
 .img-exercise {
@@ -267,8 +274,9 @@ body {
   height: 25%;
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
-  z-index: 2;
   position: relative;
+  transform: translateY(0.2em);
+  transition: 0.3s ease all;
 }
 
 .img-social {
@@ -290,8 +298,9 @@ body {
   height: 25%;
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
-  z-index: 2;
   position: relative;
+  transform: translateY(0.2em);
+  transition: 0.3s ease all;
 }
 
 .img-self-care {
@@ -318,11 +327,94 @@ main {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 14px;
   text-align: center;
-  margin-top: 50px;
-  color: hsl(15, 100%, 70%)
+  margin: 50px 0px;
+  color: hsl(145, 58%, 55%)
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  font-size: 14px;
+  color: hsl(43, 84%, 65%)
+}
+
+/* Mobile style */
+
+@media only screen and (max-width: 980px) {
+
+  main {
+    max-width: 840px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px 0px;
+  }
+
+  .profile {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin-bottom: 7px;
+  }
+
+  .work,
+  .study,
+  .play,
+  .exercise,
+  .social,
+  .self-care {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: 7px 0px;
+    height: 250px;
+  }
+
+  .profile-info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 9px;
+    width: 100%;
+  }
+
+  .name-profile {
+    font-size: 30px;
+    font-weight: 300;
+    color: whitesmoke;
+  }
+
+  .time-profile {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0px;
+    color: hsl(235, 45%, 61%);
+  }
+
+  .title p {
+    color: antiquewhite;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  
+  .ellipsis {
+    background-image: url("./images/icon-ellipsis.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    color: whitesmoke;
+  }
+ 
 }

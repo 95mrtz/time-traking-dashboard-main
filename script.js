@@ -70,7 +70,7 @@ infoLoad = (datos, dataTime) => {
       for (let i = 0; i < times.length; i++) {
         console.log(times[i].objectData);
         hours[i].innerHTML = times[i].daily.current;
-        spanTitle[i].innerHTML = "daily";
+        spanTitle[i].innerHTML = "Day";
         prevHours[i].innerHTML =times[i].daily.previous;
       }
       break;
@@ -78,7 +78,7 @@ infoLoad = (datos, dataTime) => {
       for (let i = 0; i < times.length; i++) {
         console.log(times[i].objectData);
         hours[i].innerHTML = times[i].weekly.current;
-        spanTitle[i].innerHTML = "weekly";
+        spanTitle[i].innerHTML = "Week";
         prevHours[i].innerHTML =times[i].weekly.previous;
       }
       break;
@@ -86,19 +86,40 @@ infoLoad = (datos, dataTime) => {
       for (let i = 0; i < times.length; i++) {
         console.log(times[i].objectData);
         hours[i].innerHTML = times[i].monthly.current;
-        spanTitle[i].innerHTML = "monthly";
+        spanTitle[i].innerHTML = "Month";
         prevHours[i].innerHTML =times[i].monthly.previous;
       }
       break;
   }
 };
 
-window.addEventListener("load", nameLoad);
+window.addEventListener("load",() => {
+  nameLoad();
+});
 
-window.addEventListener("load", weeklyLoad);
+window.addEventListener("load",() => {
+  weekly.classList.remove('text-muted')
+  daily.classList.add('text-muted')
+  monthly.classList.add('text-muted')
+  weeklyLoad();
+});
 
-daily.addEventListener("click", dailyLoad);
+daily.addEventListener("click", () => {
+  daily.classList.remove('text-muted')
+  weekly.classList.add('text-muted')
+  monthly.classList.add('text-muted')
+  dailyLoad();
+});
+weekly.addEventListener("click", () => {
+  weekly.classList.remove('text-muted')
+  daily.classList.add('text-muted')
+  monthly.classList.add('text-muted')
+  weeklyLoad();
+});
 
-weekly.addEventListener("click", weeklyLoad);
-
-monthly.addEventListener("click", monthlyLoad);
+monthly.addEventListener("click", () => {
+    monthly.classList.remove('text-muted')
+    daily.classList.add('text-muted')
+    weekly.classList.add('text-muted')
+    monthlyLoad();
+});
