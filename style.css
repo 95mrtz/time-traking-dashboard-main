@@ -399,6 +399,7 @@ main {
     justify-content: space-around;
     align-items: center;
     margin: 20px 0px;
+    padding-left: 0px;
     color: hsl(235, 45%, 61%);
   }
 
